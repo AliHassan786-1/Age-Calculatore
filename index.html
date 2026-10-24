@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Age Calculator</title>
+</head>
+<body>
+
+    <script>
+        // 1. Ask the user to enter Name and Birth Year
+        var userName = prompt("Enter your name:");
+        var birthYear = Number(prompt("Enter your birth year (e.g., 2005):"));
+
+        // 2. Create a variable for the current year
+        var currentYear = 2026;
+
+        // 3. Calculate the user's age using subtraction math expression
+        var age = currentYear - birthYear;
+
+        // 5. Determine the age group using if...else if statements
+        var ageGroup = "";
+
+        if (age >= 0 && age <= 12) {
+            ageGroup = "Child";
+        } 
+        else if (age >= 13 && age <= 19) {
+            ageGroup = "Teenager";
+        } 
+        else if (age >= 20 && age <= 59) {
+            ageGroup = "Adult";
+        } 
+        else if (age >= 60) {
+            ageGroup = "Senior Citizen";
+        } 
+        else {
+            ageGroup = "Invalid Birth Year";
+        }
+
+        // Bonus Challenge: Check voting eligibility
+        var votingStatus = "";
+        if (age >= 18) {
+            votingStatus = "You are eligible to vote.";
+        } else {
+            votingStatus = "You are not eligible to vote yet.";
+        }
+
+        // 4, 6 & 7. Display the results using alert() with newline characters for structure
+        var resultMessage = "Name: " + userName + "\n" +
+                            "Age: " + age + "\n" +
+                            "Age Group: " + ageGroup + "\n\n" +
+                            votingStatus;
+
+        alert(resultMessage);
+    </script>
+
+</body>
+</html>
